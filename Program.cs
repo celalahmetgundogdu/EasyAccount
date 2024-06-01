@@ -1,7 +1,16 @@
+﻿using EasyAccount.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// ****************************************************************//
+// Aşağıdaki kod dependency injection için kullanılıyor. 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+// Services dependency injectionu temsil eder. 
+// ******************************************************************************//
 
 var app = builder.Build();
 
