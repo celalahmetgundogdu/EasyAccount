@@ -9,6 +9,7 @@ namespace EasyAccount.Models
         public int CategoryId { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
+        [Required(ErrorMessage = "Title is required")]
         //column db sütunu olduğu için. Hepsi nvarchar 50 char olarak tutulacak
         public string Title {  get; set; }
         [Column(TypeName = "nvarchar(50)")]
