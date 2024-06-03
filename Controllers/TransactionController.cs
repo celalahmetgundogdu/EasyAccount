@@ -26,14 +26,14 @@ namespace EasyAccount.Controllers
         }
 
 
-        // GET: Transaction/Create
-        public IActionResult Create()
+        // GET: Transaction/AddOrEdit
+        public IActionResult AddOrEdit()
         {
             ViewData["CategoryId"] = new SelectList(_context.Category, "CategoryId", "CategoryId");
-            return View();
+            return View(new Transaction());
         }
 
-        // POST: Transaction/Create
+        // POST: Transaction/AddOrEdit
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
