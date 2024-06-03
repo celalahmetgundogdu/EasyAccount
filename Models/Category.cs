@@ -18,5 +18,15 @@ namespace EasyAccount.Models
         // Hala nullable sadece default değer olarak expensi atadın. bunu yapmamdaki asıl sebep
         // birçok insan gidere expense/gider gibi değerler atıyor. 
 
+        //Not mapped kullanılmasının sebebi runtime esnasında kullanı sonrasında iptal etmemiz. 
+        //Not mapped depo etmek için veya ana tablolarda bir değişiklik yapması için kullanılmıyor
+        [NotMapped]
+        public string? TitleWithIcon
+        {
+            get
+            {
+                return this.Icon + " " + this.Title;
+            }
+        }
     }
 }
