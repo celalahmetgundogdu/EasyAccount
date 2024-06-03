@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -25,3 +25,24 @@ body {
 .e-bigger {
     font-size: x-large; 
 }
+/*Radyo butonları için olan kısım*/
+.e-btn.group.custom-rbt-group{
+    width: 100%;
+}
+   .e-btn-group.custom-rbt-group .e-btn{
+       /*bu grubun içerisinde e.btn classına ait olanlar için*/
+       width: 50%;
+   }
+.custom-rbt-group label.e-btn{
+    box-shadow: none !important;
+    /*important dememim sebebi diğerlerinden daha öncelikli olduğunu belirtmek*/
+    border: 1px solid #fff;
+    background-color: rgb(34 43 51);
+    color: #fff;
+}
+.e-btn-group.custom-rbt-group input:checked + label.e-btn{
+    background-color: #fff;
+    color: #212b36;
+    border: 1px solid #fff;
+}
+

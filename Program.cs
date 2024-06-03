@@ -11,6 +11,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 // Services dependency injectionu temsil eder. 
 // ******************************************************************************//
+//Syncfusion bağlantısı
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NBaF1cXmhPYVppR2Nbe052fldGal5TVAciSV9jS3pTcEVhWXlccHZXRmlcUw==");
+
 
 var app = builder.Build();
 
