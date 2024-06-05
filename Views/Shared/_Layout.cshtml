@@ -47,14 +47,14 @@
                                                 <div>
                                                     @if (ViewData["PageActionText"] != null)
                                                     {
-                                                        <a class="btn btn-success" href="@ViewData["PageActionUrl"]">
+                                                        <a class="btn btn-success" href="@ViewData["PageActionUrl"]" style="color: white;">
                                                             @ViewData["PageActionText"]
                                                         </a>
                                                     }
                                                 </div>
                                             </div>
                                             <ejs-breadcrumb id="breadcrumb"
-                                                        separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
+                                                            separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
                                         </div>
                                     </div>
                                 </div>
